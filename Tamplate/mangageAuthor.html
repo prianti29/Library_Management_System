@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width= , initial-scale=1.0" />
+        <link rel="stylesheet" href="/Tamplate/CSS/adminDashboard.css" />
+        <link rel="stylesheet" href="/Tamplate/CSS/index.css" />
+        <link rel="stylesheet" href="/Tamplate/CSS/Adding.css" />
+        <link rel="stylesheet" href="/Tamplate/CSS/manageAuthor.css" />
+
+        <title>Manage Author</title>
+    </head>
+    <body>
+        <!-- header -->
+        <div class="header" id="home">
+            <div class="container">
+                <ul class="logo">
+                    <div>
+                        <i class="fa-solid fa-book-open-reader fa-3x"></i>
+                    </div>
+                    <div>
+                        <h3>
+                            online Library <br />
+                            Management System
+                        </h3>
+                    </div>
+                </ul>
+                <div class="log-btn">
+                    <p><button class="btn">LOG me Out</button></p>
+                </div>
+            </div>
+        </div>
+        <!-- //header -->
+        <!-- Navbar -->
+        <div class="navbar">
+            <a href="#">Dashboard</a>
+            <a href="#">REG STUDENTS</a>
+            <a href="#">CHANGE PASSWORD</a>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    CATEGORIES
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Add Categories</a>
+                    <a href="#">Manage Categories</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    AUTHORS
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Add Authors</a>
+                    <a href="#">Manage Authors</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    BOOKS
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Add books</a>
+                    <a href="#">Manage Book</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    ISSUED BOOKS
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Issued New Book</a>
+                    <a href="#">Manage Issued New Book</a>
+                </div>
+            </div>
+        </div>
+        <h4>Manage Author</h4>
+
+        <!-- Table -->
+        <h1>Author Listing</h1>
+
+        <table id="customers">
+            <tr>
+                <th>#</th>
+                <th>Author</th>
+                <th>Creation Date</th>
+                <th>Updation Date</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Maria Anders</td>
+                <td>Germany</td>
+                <td>Germany</td>
+                <td>
+                    <button class="button button2">Blue</button>
+                    <button class="button button3">Red</button>
+                </td>
+            </tr>
+        </table>
+
+        <!-- //footer -->
+        <div class="footer">
+            <p>online Library Management</p>
+        </div>
+    </body>
+</html>
