@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- <link rel="stylesheet" href="/Tamplate/CSS/index.css" /> -->
+        <link rel="stylesheet" href="/Tamplate/CSS/userDashboard.css" />
+        <link rel="stylesheet" href="/Tamplate/CSS/index.css">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <title>Admin Dashboard</title>
+    </head>
+    <body>
+        <!-- header -->
+        <div class="header" id="home">
+            <div class="container">
+                <ul class="logo">
+                    <div>
+                        <i class="fa-solid fa-book-open-reader fa-3x"></i>
+                    </div>
+                    <div>
+                        <h3>
+                            online Library <br />
+                            Management System
+                        </h3>
+                    </div> 
+                </ul>
+                <div class="log-btn">
+                    <p><button class="btn">LOG me Out</button></p>
+                </div>
+            </div>
+        </div>
+        <!-- //header -->
+
+        <!-- Navbar -->`
+        <div class="navbar">
+            <a href="#">Dashboard</a>
+            <a href="#">REG STUDENTS</a>
+            <a href="#">CHANGE PASSWORD</a>
+            <div class="dropdown">
+              <button class="dropbtn">CATEGORIES 
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Add Categories</a>
+                <a href="#">Manage Categories</a>
+              </div>
+            </div> 
+            <div class="dropdown">
+              <button class="dropbtn">AUTHORS 
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Add Authors</a>
+                <a href="#">Manage Authors</a>
+              </div>
+            </div> 
+            <div class="dropdown">
+              <button class="dropbtn">BOOKS 
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Add books</a>
+                <a href="#">Manage Book</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">ISSUED BOOKS 
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Issued New Book</a>
+                <a href="#">Manage Issued New Book</a>
+              </div>
+            </div>  
+          </div>
+          
+          <h4>Admin Dashboard</h4>
+        <!-- //navbar -->
+
+         <div class="row"> 
+            <div class="column">
+              <div class="card">
+                <h3><i class="fa-solid fa-book icon fa-2x"></i></h3>
+                <p style="padding-top:10px">Some text</p> 
+                <p style="padding-bottom:10px; padding-top:10px">Book Listed</p>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="card">
+                <h3><i class="fa-solid fa-recycle icon fa-2x"></i></h3>
+                <p style="padding-top:10px" >Some text</p>
+                <p style="padding-bottom:10px; padding-top:10px" >Book Not Returned Yet</p>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="card">
+                <h3 ><i class="fa-solid fa-users icon fa-2x icon"></i>
+                </i></h3>
+                <p style="padding-top:10px" >Some text</p>
+                <p style="padding-bottom:10px; padding-top:10px">Registed Users</p>
+              </div>
+            </div>
+          </div> 
+          <div class="row" style="margin-bottom: 50px;"> 
+            <div class="column" >
+              <div class="card">
+                <h3><i class="fa-solid fa-user icon fa-2x"></i></h3>
+                <p style="padding-top:10px">Some text</p>
+                <p style="padding-bottom:10px; padding-top:10px">Author User</p>
+              </div>
+            </div>
+            <div class="column" >
+              <div class="card">
+                <h3><i class="fa-solid fa-file-zipper fa-2x"></i></h3>
+                <p style="padding-top:10px">Some text</p>
+                <p style="padding-bottom:10px; padding-top:10px">Listed Categories</p>
+              </div>
+            </div>
+            </div>      
+          <div class="footer">
+            <p>online Library Management</p>
+        </div>
+
+    </body>
+</html>

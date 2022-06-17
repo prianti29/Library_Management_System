@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: azure;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo div {
+  margin: 10px;
+  font-size: 25px;
+}
+
+li,
+a {
+  font-weight: 500;
+  font-size: 16px;
+  color: rgb(49, 48, 48);
+  text-decoration: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-transform: uppercase;
+}
+.btn{
+float: right;
+padding: 15px 15px 15px 15px;
+border: #ed3f0a 3px solid;
+border-radius: 5px;
+}
+.btn:hover{
+  background-color: #ed3f0a;
+  color: #ddd;
+
+}
+h4 {
+  text-align: left;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 6%;
+  border-top: #008892 solid 2px;
+  border-bottom: #008892 solid 2px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-size: larger;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #b0ccce;
+  border-bottom: 3px solid green;
+}
+
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 30px 16px;
+  text-decoration: none;
+  background-color: #b0ccce;
+
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+  background-color: #b0ccce;
+}
+
+.dropdown .dropbtn {
+  font-size: 15px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 30px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  color: #008892;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.column {
+  float: left;
+  width: 20%;
+  padding: 0 2px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+  margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 2px;
+  text-align: center;
+  background-color: #f1f1f1;
+
+}
+
+.row {
+  margin-left: 30%;
+  margin-top: 20px;
+
+}
