@@ -1,56 +1,74 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <link rel="stylesheet" href="{{ asset('admin/index.css') }}">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
 
-        <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />
-
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
-
-            <!-- Email Address -->
-            <div>
-                <x-label for="email" :value="__('Email')" />
-
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+        <title>Index</title>
+    </head>
+    <body>
+        <!-- header -->
+        <div class="header" id="home">
+            <div class="container">
+                <ul class="logo">
+                    <div>
+                        <i class="fa-solid fa-book-open-reader fa-3x"></i>
+                    </div>
+                    <div>
+                        <h3>
+                            online Library <br />
+                            Management System
+                        </h3>
+                    </div>
+                </ul>
             </div>
+        </div>
+        <!-- //header -->
 
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
+        <!-- Navbar -->
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">User Login</a></li>
+                <li><a href="#">User signup</a></li>
+                <li><a href="#">admin login</a></li>
+            </ul>
+        </nav>
+        <!-- //Navbar -->
 
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="current-password" />
+        <!-- Body -->
+        <div class="body">
+            <div class="img">
+                <img src="/images/dashboard_image_2.jpg" alt="" />
             </div>
-
-            <!-- Remember Me -->
-            <div class="block mt-4">
-                <label for="remember_me" class="inline-flex items-center">
-                    <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
+        </div>
+            <div class="form">
+                <h4>User login form</h4>
+                <div class="form-items">
+                    <form action="" >
+                       <p>Login Form</p>
+                        <label for="email">Enter Your Email</label> <br />
+                        <input type="email" id="" name="" /><br />
+                        <label for="Password" style="padding-right: 105px;">Password</label> <br />
+                        <input type="password" id="" name="" style="margin-bottom: 2px;" />
+                        <p class="help-block"><a href=""  style="color: red">Forgot Password</a></p>
+                    </form>
+                    <button type="submit" name="login" class="btn btn-info" style="padding: 10px 10px 10px 10px; margin-bottom: 50px; margin-top: 10px;">LOGIN </button> | <a href="">Not Register Yet</a>
+                </div>
             </div>
-
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
-
-                <x-button class="ml-3">
-                    {{ __('Log in') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
+           
+                <div class="footer">
+                    <p >online Library Management</p>
+                </div>
+  
+    </body>
+</html>

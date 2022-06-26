@@ -38,6 +38,7 @@ nav {
     padding: 30px 10%;
     background: #b0ccce;
     border-bottom: 3px solid green;
+    margin-bottom: 2px;
 }
 
 .nav-links li {
@@ -61,7 +62,7 @@ nav {
     margin-right: 30%;
     width: 100%;
     margin-top: 2%;
-    margin-bottom: 2%;
+    margin-bottom: 2px;
 }
 
 .form h4 {
@@ -81,28 +82,31 @@ nav {
     padding: 20px 20px 20px 20px;
     display: inline-block;
     margin-left: 40%;
-    margin-right: 40%;
-    background-color: #008892;
-    /* padding: 6px 6px 6px 6px; */
+    margin-right: 20%;
+    /* background-color: #008892; */
+    padding: 6px 6px 6px 6px;
 }
 .form .form-items label {
-    background-color: #008892;
+    /* background-color: #008892; */
     padding-right: 32%;
     padding-top: 9px;
     padding-bottom: 9px;
     margin-right: 0%;
     margin-bottom: 6px;
     margin-top: 10px;
-    color: #b0ccce;
+    color: #1c1e1e;
 }
 .form .form-items input {
     margin-top: 10px;
     margin-bottom: 10px;
+    padding-right: 100px;
+    padding-bottom: 20px;
 }
 
 .form .form-items p {
     margin-bottom: 15px;
     padding-bottom: 10px;
+    /* color: red; */
 }
 
 .footer{
@@ -112,13 +116,19 @@ nav {
     width: 100%;
     color: black;
     text-align: right;
+    margin-top: 40px;
 }
 .footer p{
     padding: 6px 30px 6px 0px;
     margin-top: 10px;
     background-color: #b0ccce;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   
 } 
 /* .footer p{
   background-color: aqua;
 } */
+
+.btn .btn-info{
+    margin-bottom: 20px;
+}
