@@ -54,20 +54,34 @@
             <div class="form">
                 <h4>Signup form</h4>
                 <div class="form-items">
-                    <form action="" >
+                    <form action="{{ route('register') }}" method="post">
+                        @csrf
                        <p>Signup Form</p>
-                        <label for="text">Enter full name</label> <br />
-                        <input type="text" id="" name="" /><br />
-                        <label for="number">Mobile number</label> <br />
-                        <input type="number" id="" name="" /><br />
+                        <label for="name">Enter full name</label> <br />
+                        <input type="text" id="" name="name" value="{{old('name')}}"/><br />
+                        @error('name')
+                        <p style="color: red">{{ $message }}</p>
+                        @enderror
+                        {{-- <label for="number">Mobile number</label> <br />
+                        <input type="number" id="" name="" /><br /> --}}
                         <label for="email">Enter Your Email</label> <br />
-                        <input type="email" id="" name="" /><br />
+                        <input type="email" id="" name="email" value="{{old('email')}}"/><br />
+                        @error('email')
+                        <p style="color: red">{{ $message }}</p>
+                        @enderror
                         <label for="Password" style="padding-right: 105px;">Password</label> <br />
-                        <input type="password" id="" name="" style="margin-bottom: 8px;" /> <br>
-                        <label for="Password" style="padding-right: 105px;">Confirm Password</label> <br />
-                        <input type="password" id="" name="" style="margin-bottom: 2px;" />
+                        <input type="password" id="" name="password" style="margin-bottom: 8px;" /> <br>
+                        @error('password')
+                        <p style="color: red">{{ $message }}</p>
+                        @enderror
+                        <label for="password_confirmation" style="padding-right: 105px;">Confirm Password</label> <br />
+                        <input type="password" id="" name="password_confirmation" style="margin-bottom: 2px;" /> <br>
+                        @error('password_confirmation')
+                        <p style="color: red">{{ $message }}</p>
+                        @enderror
+                        <button type="submit" name="login" class="btn btn-info" style="padding: 10px 10px 10px 10px; margin-bottom: 50px; margin-top: 10px;" >Register </button> 
                     </form>
-                    <button type="submit" name="login" class="btn btn-info" style="padding: 10px 10px 10px 10px; margin-bottom: 50px; margin-top: 10px;" >Register </button> 
+                    
                 </div>
             </div>
            

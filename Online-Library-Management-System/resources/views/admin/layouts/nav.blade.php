@@ -12,9 +12,12 @@
                 </h3>
             </div> 
         </ul>
+        <form action="{{ url('/logout') }}" method="POST">
+          @csrf
         <div class="log-btn">
-            <p><button class="btn">LOG me Out</button></p>
+            <p><button class="btn" type="submit">LOG me Out</button></p>
         </div>
+      </form>
     </div>
 </div>
 <!-- //header -->
