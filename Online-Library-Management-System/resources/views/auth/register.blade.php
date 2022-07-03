@@ -37,10 +37,10 @@
         <!-- Navbar -->
         <nav>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">User Login</a></li>
-                <li><a href="#">User signup</a></li>
-                <li><a href="#">admin login</a></li>
+                {{-- <li><a href="{{ url('dasboard') }}">Home</a></li> --}}
+                <li><a href="{{ url('login') }}">User Login</a></li>
+                <li><a href="{{ url('register') }}">User signup</a></li>
+                <li><a href="{{ url('login') }}">admin login</a></li>
             </ul>
         </nav>
         <!-- //Navbar -->

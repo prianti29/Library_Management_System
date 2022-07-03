@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Middleware\onlyAdmin;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,15 +22,15 @@ Route::get('/', function () {
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth'])->name('dashboard');
- Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth'])->name('dashboard');
+// Route::get('/admin/dashboard', [DashboardController::class, 'index'])->middleware(['auth'])->name('dashboard');
 
-// Route::prefix('/admin')->middleware(['auth'])->group(function () {
-//     Route::get('/dashboard', [DashboardController::class, 'index']);
-    // Route::get('/booklisted', [DashboardController::class, 'index']);
-    // Route::get('/notreturned', [DashboardController::class, 'index']);
-    // Route::get('/registerduser', [DashboardController::class, 'index']);
-    // Route::get('/authoruser', [DashboardController::class, 'index']);
-    // Route::get('/categories', [DashboardController::class, 'index']);
-// });
+Route::prefix('/admin')->middleware(['auth',onlyAdmin::class])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index']);
+    Route::get('/booklisted', [DashboardController::class, 'index']);
+    Route::get('/notreturned', [DashboardController::class, 'index']);
+    Route::get('/registerduser', [DashboardController::class, 'index']);
+    Route::get('/authoruser', [DashboardController::class, 'index']);
+    Route::get('/categories', [DashboardController::class, 'index']);
+});
 
 require __DIR__ . '/auth.php';
