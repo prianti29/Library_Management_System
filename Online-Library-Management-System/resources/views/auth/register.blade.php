@@ -13,7 +13,7 @@
             referrerpolicy="no-referrer"
         />
 
-        <title>Index</title>
+        <title>Register</title>
     </head>
     <body>
         <!-- header -->

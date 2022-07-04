@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\Admin\AuthorController;
+use App\Http\Controllers\Admin\BooksController;
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\IssuedBooksController;
 use App\Http\Middleware\onlyAdmin;
 use Illuminate\Support\Facades\Route;
 
@@ -26,11 +30,11 @@ Route::get('/', function () {
 
 Route::prefix('/admin')->middleware(['auth',onlyAdmin::class])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index']);
-    Route::get('/booklisted', [DashboardController::class, 'index']);
-    Route::get('/notreturned', [DashboardController::class, 'index']);
-    Route::get('/registerduser', [DashboardController::class, 'index']);
-    Route::get('/authoruser', [DashboardController::class, 'index']);
-    Route::get('/categories', [DashboardController::class, 'index']);
+    Route::resource('/categories', CategoryController::class);
+    Route::resource('/author', AuthorController::class);
+    Route::resource('/books', BooksController::class);
+    Route::resource('/issuebooks', IssuedBooksController::class);
+   
 });
 
 require __DIR__ . '/auth.php';
