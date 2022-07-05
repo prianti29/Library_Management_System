@@ -34,7 +34,6 @@ Route::prefix('/admin')->middleware(['auth',onlyAdmin::class])->group(function (
     Route::resource('/author', AuthorController::class);
     Route::resource('/books', BooksController::class);
     Route::resource('/issuebooks', IssuedBooksController::class);
-   
 });
 
 require __DIR__ . '/auth.php';

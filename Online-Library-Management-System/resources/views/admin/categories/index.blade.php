@@ -4,11 +4,11 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width= , initial-scale=1.0" />
-        <link rel="stylesheet" href="/CSS/adminDashboard.css" />
-        <link rel="stylesheet" href="/CSS/index.css" />
-        <link rel="stylesheet" href="/CSS/Adding.css" />
-        <link rel="stylesheet" href="/CSS/manageAuthor.css" />
-        <link rel="stylesheet" href="/CSS/manageCategories.css">
+        <link rel="stylesheet" href="/admin/adminDashboard.css" />
+        <link rel="stylesheet" href="/admin/index.css" />
+        <link rel="stylesheet" href="/admin/Adding.css" />
+        <link rel="stylesheet" href="/admin/manageAuthor.css" />
+        <link rel="stylesheet" href="/admin/manageCategories.css">
 
         <title>Manage Categories</title>
     </head>

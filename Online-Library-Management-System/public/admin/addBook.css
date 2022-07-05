@@ -1,0 +1,49 @@
+.book-dropbtn {
+    background-color: #9ed1a0;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-left: 33px;
+    width: 520px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+
+  }
+  
+  .book-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .book-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .book-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .book-dropdown-content a:hover {background-color: #f1f1f1}
+  
+.book-dropdown:hover .book-dropdown-content {
+    display: block;
+  }
+  
+  .book-add_btn{
+    margin-left: 35px;
+     padding: 15px;
+     background-color: rgb(61, 156, 42);
+     color: azure;
+     border-radius: 10px;
+     margin-bottom: 100px;
+ }

@@ -36,7 +36,7 @@
       <div class="card">
         <h3><i class="fa-solid fa-file-zipper fa-2x"></i></h3>
         <p style="padding-top:10px">Some text</p>
-        <p style="padding-bottom:10px; padding-top:10px">Listed Categories</p>
+       <a href="{{ url('admin/categories/index') }}"><p style="padding-bottom:10px; padding-top:10px">Listed Categories</p></a> 
       </div>
     </div>
     </div>  
