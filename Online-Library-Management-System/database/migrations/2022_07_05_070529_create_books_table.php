@@ -22,7 +22,6 @@ class CreateBooksTable extends Migration
             $table->double('Price')->nullable();
             $table->string('BookImage')->nullable();
             $table->integer('IsIssued')->nullable();
-
             $table->timestamps();
         });
     }
