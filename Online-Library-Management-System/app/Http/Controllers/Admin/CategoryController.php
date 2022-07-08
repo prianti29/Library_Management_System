@@ -17,7 +17,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return view('admin.categories.index');
+        $data['category_list'] = Category::get();
+        return view('admin.categories.index',$data);
     }
 
     /**
@@ -27,7 +28,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        // $data['main_book_category'] = MainBookCategory::asSelectArray();
+       
         return view('admin.categories.create');
     }
 
@@ -39,11 +40,11 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $category = new Category();
-        $category->name= $request->name;
-        $category->save();
-        return redirect('/admin/categories');
-       
+         $category = new Category();
+         $category->CategoryName= $request->name;
+         $category->Status= $request->status;
+         $category->save();
+         return redirect('/admin/categories');
     }
 
     /**
@@ -65,7 +66,12 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $category = Category::find($id);
+        if(!$category){
+           return redirect('/admin/categories');
+        }
+        $data["category"]= $category;
+        return view('admin.categories.edit',$data);
     }
 
     /**
@@ -77,7 +83,14 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $category= Category::find($id);
+        if(!$category){
+            return redirect('/admin/categories');
+         }
+       $category->CategoryName= $request->name;
+       $category->save();
+       return redirect('/admin/categories');
+        
     }
 
     /**
@@ -88,6 +101,11 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $category= Category::find($id);
+        if(!$category){
+            return redirect('/admin/categories');
+         }
+         $category->delete();
+         return redirect('/admin/categories');
     }
 }

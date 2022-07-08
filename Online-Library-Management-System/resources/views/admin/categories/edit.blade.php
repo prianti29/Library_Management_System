@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-       
-    <title>Add Categories</title>
+
+    <title>Update Categories</title>
 </head>
 
 <body>
@@ -84,27 +84,24 @@
             </div>
         </div>
     </div>
-    <h4>Add Category</h4>
+    <h4>Update Category</h4>
     <div class="add_author_card">
-        <form method="POST" action="{{ route('categories.store') }}">
+        <form method="POST" action="{{ url("/admin/categories/$category->id") }}">
+            @method("put");
             @csrf
             <div class="add_author_container">
                 <h4><b>Category Info</b></h4>
                 <label for="">Category name</label><br><br>
-                <input type="text" name="name" value="{{old('name')}}"> <br>
-                <label for="">Status</label><br><br>
+                <input type="text" name="name" value="{{ $category->CategoryName }}"> <br>
+                {{-- <label for="">Status</label><br><br> --}}
 
-                {{-- <input type="radio" name="status" value="0" {{ ($site->status=="0")? "checked" : "" }} style="margin-left: -200px"> <label style="margin-left: -250px">Active</label><br>
-                <input type="radio" name="status" value="1" {{ ($site->status=="1")? "checked" : "" }} style="margin-left: -200px"> <label style="margin-left: -250px">Inactive</label><br> --}}
-
-
-               
-                
-
-
+                {{-- <input type="radio" name="status" value="0" {{ ($site->status=="0")? "checked" : "" }}
+                style="margin-left: -200px"> <label style="margin-left: -250px">Active</label><br>
+                <input type="radio" name="status" value="1" {{ ($site->status=="1")? "checked" : "" }}
+                    style="margin-left: -200px"> <label style="margin-left: -250px">Inactive</label><br> --}}
 
                 <div class="add_author_card_btn">
-                    <p><button class="add_btn" style="margin-bottom: 80px">Add</button></p>
+                    <p><button class="add_btn" style="margin-bottom: 80px">Update</button></p>
                 </div>
             </div>
         </form>
