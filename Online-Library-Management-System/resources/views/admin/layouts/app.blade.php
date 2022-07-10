@@ -7,11 +7,6 @@
         <!-- <link rel="stylesheet" href="/Tamplate/CSS/index.css" /> -->
         <link rel="stylesheet" href="{{ asset('admin/userDashboard.css') }} " />
         <link rel="stylesheet" href="{{ asset(' admin/index.css') }}">
-
-        {{-- <link rel="stylesheet" href="{{ asset('admin/listedbook.css') }} " />
-        <link rel="stylesheet" href="{{ asset('admin/adminDashboard.css') }} ">
-        <link rel="stylesheet" href="{{ asset('admin/index.css') }} ">
-        <link rel="stylesheet" href="{{ asset('admin/addAuthor.css') }} "> --}}
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"

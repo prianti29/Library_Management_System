@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Authors;
+use App\Models\Books;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class BooksController extends Controller
@@ -14,7 +17,8 @@ class BooksController extends Controller
      */
     public function index()
     {
-        //
+        $data['book_list'] = Books::get();
+        return view('admin.books.index', $data);
     }
 
     /**
@@ -24,7 +28,9 @@ class BooksController extends Controller
      */
     public function create()
     {
-        //
+        $data['category_list'] = Category::get();
+        $data['author_list'] = Authors::get();
+        return view('admin.books.create', $data);
     }
 
     /**
@@ -35,7 +41,15 @@ class BooksController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $book = new Books();
+        $book->BookName = $request->name;
+        $book->CategoryId = $request->Category_Id;
+        $book->AuthorId = $request->Author_Id;
+        $book->Price = $request->price;
+        $book->ISBNumber = $request->number;
+        $book->BookImage = $request->picture;
+        $book->save();
+        return redirect('/admin/books');
     }
 
     /**

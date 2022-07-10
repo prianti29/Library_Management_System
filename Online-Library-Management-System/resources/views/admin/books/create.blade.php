@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="/admin/adminDashboard.css">
     <link rel="stylesheet" href="/admin/index.css">
     <link rel="stylesheet" href="/admin/addAuthor.css">
+    <link rel="stylesheet" href="/admin/addBook.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-       
-    <title>Add Categories</title>
+    <title>Add Author</title>
 </head>
 
 <body>
@@ -70,10 +70,11 @@
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="{{ url('/admin/books/create') }}">Add books</a>
+                <a href="{{ url('/admin/books/create', []) }}">Add books</a>
                 <a href="{{ url('/admin/books') }}">Manage Book</a>
             </div>
         </div>
+
         <div class="dropdown">
             <button class="dropbtn">ISSUED BOOKS
                 <i class="fa fa-caret-down"></i>
@@ -84,22 +85,52 @@
             </div>
         </div>
     </div>
-    <h4>Add Author</h4>
+    <h4>Add Book</h4>
     <div class="add_author_card">
-        <form method="POST" action="{{ route('author.store') }}">
+        <form method="POST" action="{{ route('books.store') }}">
             @csrf
             <div class="add_author_container">
-                <h4><b>author Info</b></h4>
-                <label for="">Author name</label><br><br>
-                <input type="text" name="name" value="{{old('name')}}"> <br>
+                <h4><b>Book Info</b></h4>
+                <label for="">Book name </label><br><br>
+                <input type="text" name="name" value="{{old('name')}}">
+                <div class="book-dropdown">
+                    <p class="book-dropbtn">Categories
+                    </p>
+                    <div class="book-dropdown-content">
+                        <select name="Category_Id">
+                            @foreach ($category_list as $item)
+                            <option value="{{ $item->id }}"> {{$item->CategoryName}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+                <div class="book-dropdown">
+                    <p class="book-dropbtn">Author
+                    </p>
+                    <div class="book-dropdown-content">
+                        <select name="Author_Id">
+                            <option value="{{ $item->id }}">
+                                @foreach ($author_list as $item)
+                                {{$item->AuthorName}}
+                                @endforeach
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <label for="">Price </label><br><br>
+                <input type="number" name="price" value="{{old('price')}}">
+                <label for="">ISBN Number </label><br><br>
+                <input type="number" name="number" value="{{old('number')}}">
+                <p style="color: rgb(82, 96, 82); font-size: 16px; margin-left: 35px; margin-bottom: 10px;">An ISBN is
+                    an International Standard Book Number.ISBN Must be unique</p>
+                <label for="">Book Picture </label><br><br>
+                <input type="file" name="picture" value="{{old('picture')}}">
+
                 <div class="add_author_card_btn">
-                    <p><button class="add_btn" style="margin-bottom: 80px">Add</button></p>
+                    <p><button class="book-add_btn">Add</button></p>
                 </div>
             </div>
         </form>
-
-
-
     </div>
     <!-- //navbar -->
     <div class="footer">

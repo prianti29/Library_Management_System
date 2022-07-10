@@ -66,7 +66,7 @@
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="{{ url('admi/books/create') }}">Add books</a>
+                <a href="{{ url('admin/books/create') }}">Add books</a>
                 <a href="{{ url('admin/books') }}">Manage Book</a>
             </div>
         </div>
@@ -81,7 +81,7 @@
             </div>
         </div>
     </div>
-    <h4>Manage Author</h4>
+    <h4>Manage Book</h4>
 
     <!-- Table -->
     <h1>Authors</h1>
@@ -107,20 +107,28 @@
     <table id="customers">
         <tr>
             <th>#</th>
-            <th>Authors</th>
-            <th>Creation Date</th>
-            <th>Updation Date</th>
+            <th>Book Image</th>
+            <th>BookName</th>
+            <th>Category</th>
+            <th>Author</th>
+            <th>ISBN</th>
+            <th>Price</th>
             <th>Action</th>
         </tr>
 
-        @foreach ($author_list as $item)
+        @foreach ($book_list as $item)
         <tr>
             <td>{{ $item->id }}</td>
-            <td>{{ $item->AuthorName }}</td>
-            <td>{{ $item->created_at }}</td>
-            <td>{{ $item->updated_at }}</td>
+            <td>{{ $item->BookImage }}</td>
+            <td>{{ $item->BookName }}</td>
+            <td>{{ $item->CategoryId }}</td>
+            <td>{{ $item->AuthorId }}</td>
+            <td>{{ $item->ISBNumber }}</td>
+            <td>{{ $item->Price }}</td>
+
             <td>
-                <a href="{{ url("/admin/author/$item->id/edit") }}" class="button button2">Edit</a>
+                {{-- <button class="button button2">Edit</button> --}}
+                <a href="{{ url("/admin/books/$item->id/edit") }}" class="button button2">Edit</a>
                 <form action="{{ url("/admin/author/$item->id") }}" method="POST">
                     @csrf
                     @method("delete")
