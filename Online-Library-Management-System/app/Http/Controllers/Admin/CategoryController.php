@@ -42,7 +42,7 @@ class CategoryController extends Controller
     {
          $category = new Category();
          $category->CategoryName= $request->name;
-         $category->Status= $request->status;
+        //  $category->Status= $request->status;
          $category->save();
          return redirect('/admin/categories');
     }

@@ -42,9 +42,9 @@
              <i class="fa fa-caret-down"></i>
          </button>
          <div class="dropdown-content">
-             <a href="#">Add Authors</a>
-             <a href="#">Manage Authors</a>
-         </div>
+            <a href="{{ url('admin/author/create') }}">Add Authors</a>
+            <a href="{{ url('admin/author') }}">Manage Author</a>
+        </div>
      </div>
      <div class="dropdown">
          <button class="dropbtn">BOOKS

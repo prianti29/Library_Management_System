@@ -29,7 +29,9 @@
         <div class="card">
             <h3><i class="fa-solid fa-user icon fa-2x"></i></h3>
             <p style="padding-top:10px">Some text</p>
+            <a href="{{ url('admin/author') }}">
             <p style="padding-bottom:10px; padding-top:10px">Author User</p>
+        </a>
         </div>
     </div>
     <div class="column">

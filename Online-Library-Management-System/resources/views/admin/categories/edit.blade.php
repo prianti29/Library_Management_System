@@ -105,9 +105,6 @@
                 </div>
             </div>
         </form>
-
-
-
     </div>
     <!-- //navbar -->
     <div class="footer">
