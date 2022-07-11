@@ -17,9 +17,12 @@ class CreateBooksTable extends Migration
             $table->id();
             $table->string('BookName');
             // $table->integer('CategoryId')->nullable(); 
-            $table->foreignId('CategoryId')->constrained('category');
-            $table->foreignId('AuthorId')->constrained('author');
-            // $table->integer('AuthorId')->nullable();
+            $table->foreignId('CategoryId')->nullable()->constrained('categories');
+            $table->foreignId('AuthorID')->nullable()->constrained('authors');
+            // $table->foreign('AuthorID')->reference('id')->on('authors')->onDelete('cascade');
+            //$table->integer('AuthorId')->nullable();
+            // $table->foreignId('CategoryId')->constrained('categories');
+            // $table->foreignId('AuthorId')->constrained('authors');
             $table->string('ISBNumber')->nullable();
             $table->double('Price')->nullable();
             $table->string('BookImage')->nullable();
@@ -27,7 +30,6 @@ class CreateBooksTable extends Migration
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      *
