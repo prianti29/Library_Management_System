@@ -109,11 +109,11 @@
                     </p>
                     <div class="book-dropdown-content">
                         <select name="Author_Id">
+                            @foreach ($author_list as $item)
                             <option value="{{ $item->id }}">
-                                @foreach ($author_list as $item)
                                 {{$item->AuthorName}}
-                                @endforeach
                             </option>
+                            @endforeach
                         </select>
                     </div>
                 </div>

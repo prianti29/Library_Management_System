@@ -84,7 +84,7 @@
     <h4>Manage Book</h4>
 
     <!-- Table -->
-    <h1>Authors</h1>
+    <h1>Books</h1>
 
     <!-- Pagination -->
     <form action="" class="select_box">
@@ -121,8 +121,10 @@
             <td>{{ $item->id }}</td>
             <td>{{ $item->BookImage }}</td>
             <td>{{ $item->BookName }}</td>
-            <td>{{ $item->CategoryId }}</td>
-            <td>{{ $item->AuthorId }}</td>
+            <td>{{ $item['CategoryId'] }}</td>
+            {{-- <td>{{ $item->category->CategoryName }}</td>  --}}
+            {{-- {{ $item }} --}}
+             <td>{{ $item->AuthorId }}</td>
             <td>{{ $item->ISBNumber }}</td>
             <td>{{ $item->Price }}</td>
 

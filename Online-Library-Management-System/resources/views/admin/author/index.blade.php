@@ -66,7 +66,7 @@
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="{{ url('admi/books/create') }}">Add books</a>
+                <a href="{{ url('admin/books/create') }}">Add books</a>
                 <a href="{{ url('admin/books') }}">Manage Book</a>
             </div>
         </div>

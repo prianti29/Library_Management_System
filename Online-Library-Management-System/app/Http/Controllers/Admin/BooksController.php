@@ -18,6 +18,8 @@ class BooksController extends Controller
     public function index()
     {
         $data['book_list'] = Books::get();
+        //dd( Books::get());
+        
         return view('admin.books.index', $data);
     }
 
