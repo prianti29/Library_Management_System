@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="/admin/adminDashboard.css">
     <link rel="stylesheet" href="/admin/index.css">
     <link rel="stylesheet" href="/admin/addAuthor.css">
+    <link rel="stylesheet" href="/admin/addBook.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <title>Update Categories</title>
+    <title>Add Author</title>
 </head>
 
 <body>
@@ -61,7 +61,7 @@
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="{{ url('admin/author/create') }}">Add Authors</a>
+                <a href="{{ url('admin.author.create') }}">Add Authors</a>
                 <a href="{{ url('admin/author') }}">Manage Author</a>
             </div>
         </div>
@@ -70,10 +70,11 @@
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="#">Add books</a>
-                <a href="#">Manage Book</a>
+                <a href="{{ url('/admin/books/create') }}">Add books</a>
+                <a href="{{ url('/admin/books') }}">Manage Book</a>
             </div>
         </div>
+
         <div class="dropdown">
             <button class="dropbtn">ISSUED BOOKS
                 <i class="fa fa-caret-down"></i>
@@ -84,23 +85,54 @@
             </div>
         </div>
     </div>
-    <h4>Update Author</h4>
+    <h4>Add Book</h4>
     <div class="add_author_card">
-        <form method="POST" action="{{ url("/admin/author/$author->id") }}">
+        <form method="POST" action="{{url("/admin/author/$book->id") }}">
             @method("put");
             @csrf
             <div class="add_author_container">
-                <h4><b>Author Info</b></h4>
-                <label for="">Auhtor name</label><br><br>
-                <input type="text" name="name" value="{{ $author->AuthorName }}"> <br>
+                <h4><b>Book Info</b></h4>
+                <label for="">Book name </label><br><br>
+                <input type="text" name="name" value="{{ $book->BookName }}">
+                <div class="book-dropdown">
+                    <p class="book-dropbtn">Categories
+                    </p>
+                    <div class="book-dropdown-content">
+                        <select name="Category_Id">
+                            @foreach ($book as $item)
+                            {{ dd($item)}}
+                            <option value="{{ 
+                                $item['Category_id'] }}"> </option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+                <div class="book-dropdown">
+                    <p class="book-dropbtn">Author
+                    </p>
+                    <div class="book-dropdown-content">
+                        <select name="Author_Id">
+                            @foreach ($book as $item)
+                            <option value="{{  $item['Author_id']}}">
+                            </option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+                <label for="">Price </label><br><br>
+                <input type="number" name="price" value="{{ $book->Price }}">
+                <label for="">ISBN Number </label><br><br>
+                <input type="number" name="number" value="{{ $book->ISBNumber }}">
+                <p style="color: rgb(82, 96, 82); font-size: 16px; margin-left: 35px; margin-bottom: 10px;">An ISBN is
+                    an International Standard Book Number.ISBN Must be unique</p>
+                <label for="">Book Picture </label><br><br>
+                <input type="file" name="picture" value="{{ $book->BookImage }}">
+
                 <div class="add_author_card_btn">
-                    <p><button class="add_btn" style="margin-bottom: 80px">Update</button></p>
+                    <p><button class="book-add_btn">Update</button></p>
                 </div>
             </div>
         </form>
-
-
-
     </div>
     <!-- //navbar -->
     <div class="footer">

@@ -17,8 +17,8 @@ class CreateBooksTable extends Migration
             $table->id();
             $table->string('BookName');
             // $table->integer('CategoryId')->nullable(); 
-            $table->foreignId('CategoryId')->nullable()->constrained('categories');
-            $table->foreignId('AuthorID')->nullable()->constrained('authors');
+            $table->foreignId('Category_id')->nullable()->constrained('categories');
+            $table->foreignId('Author_id')->nullable()->constrained('authors');
             // $table->foreign('AuthorID')->reference('id')->on('authors')->onDelete('cascade');
             //$table->integer('AuthorId')->nullable();
             // $table->foreignId('CategoryId')->constrained('categories');

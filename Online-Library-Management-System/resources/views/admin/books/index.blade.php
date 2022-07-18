@@ -121,10 +121,12 @@
             <td>{{ $item->id }}</td>
             <td>{{ $item->BookImage }}</td>
             <td>{{ $item->BookName }}</td>
-            <td>{{ $item['CategoryId'] }}</td>
-            {{-- <td>{{ $item->category->CategoryName }}</td>  --}}
+            <td>{{ $item->Category_id }}</td>
+            <td>{{ $item->Author_id }}</td>
+            {{-- <td>{{ $item['CategoryId'] }}</td> --}}
+            {{-- <td>{{ $item->cf ategories->CategoryName }}</td> --}}
             {{-- {{ $item }} --}}
-             <td>{{ $item->AuthorId }}</td>
+            {{-- <td>{{ $item->AuthorID }}</td> --}}
             <td>{{ $item->ISBNumber }}</td>
             <td>{{ $item->Price }}</td>
 
