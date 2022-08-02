@@ -1,0 +1,112 @@
+* {
+    margin: auto;
+    padding: 0;
+}
+
+/*LOGO */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.top-nav .btn button {
+    background-color: #C0392B;
+    color: #E5E7E9;
+    padding: 12px;
+    border: 1px solid #E5E7E9;
+    border-radius: 8px;
+    font-size: larger;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* NAVBAR */
+.nav {
+    display: flex;
+    width: 100%;
+    background-color: rgb(186, 188, 187);
+    height: 50px;
+    border-bottom: 4px solid rgb(34, 32, 32);
+    margin-top: 10px;
+}
+
+/* .nav .navLinks ul {
+    list-style-type: none;
+    display: flex;
+    float: right;
+    margin-left: 60pc;
+    margin-top: 10px;
+} */
+
+/* .nav .navLinks ul li a {
+    text-decoration: none;
+    display: flex;
+    padding-right: 25px;
+    font-weight: 500;
+    font-size: 15px;
+    color: #000000;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+} */
+.nav .navLinks ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    float: right;
+}
+
+.navLinks ul li a {
+    list-style-type: none;
+    text-decoration: none;
+    margin-right: 20px;
+    font-family: 'Lato', sans-serif;
+    color: #000000;
+    font-weight: 500;
+    font-size: 17px;
+    
+}
+/* DROPDOWN */
+.dropbtn{
+    background: none;
+    border: none;
+    width: 15%;
+    font-family: 'Lato', sans-serif;
+    color: #000000;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    background: none;
+    width: 100%;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1; 
+}
+
+.dropdown-content a {
+    /* background: #000000; */
+    color: #f1f1f1;
+    text-decoration: none;
+    text-decoration: none;
+    display: block;
+    width: 110%;
+    font-size: larger;
+    padding-top:10px 10px 10px 10px;
+    font-family: 'Lato', sans-serif;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #000000;
+    color:#f1f1f1;
+    font-family: 'Lato', sans-serif;
+}

@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+*{
+    margin: auto;
+}
+/* Navtop */
+.logo img {
+    display: flex;
+    margin-left: 16pc;
+    margin-top: 3pc;
+    margin-bottom: 6px;
+}
+
+/* NAVBAR */
+.nav {
+    display: flex;
+    width: 100%;
+    background-color: rgb(186, 188, 187);
+    height: 70px;
+    border-bottom: 4px solid rgb(34, 32, 32);
+}
+
+.nav .navLinks ul {
+    list-style-type: none;
+    display: flex;
+    float: right;
+    margin-left: 60pc;
+    margin-top: 20px;
+
+}
+
+.nav .navLinks ul li a {
+    text-decoration: none;
+    display: flex;
+    padding-right: 40px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #000000;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+}
+
+/* CAOUSAL */
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    margin-top: 30px;
+    border: 5px solid #000000;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+/* HEAD */
+.header{
+    border-top: 3px solid #717171;
+    border-bottom: 3px solid #717171;
+    margin-top: 50px;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+.header p{
+    margin-left: 30px;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+/* USER LOGIN FORM */
+.card{
+    border: 2px solid #717171;
+    width: 30%;
+    margin-left: 35%;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.title{
+    height: 40px;
+    background-color: #c6c6c6;
+    margin-bottom: 10px;
+    margin-top: 2%;
+    width: 31.6%;
+    margin-left: 35%;
+    
+}
+.title p{
+   padding: 5px;
+   margin-left: 10px;
+   font-size: 20px;
+   font-weight: 700;
+   font-family: 'Lato', sans-serif;
+   text-transform: uppercase;
+}
+.card input {
+    width: 100%;
+    padding: 10px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1.5px solid #000000;
+  }
+.card label{
+    font-size: 17px;
+    font-weight: 700;
+    font-family: 'Lato', sans-serif;
+  }
+  .card a{
+    color: #717171;
+    text-decoration: none;
+    font-size: larger;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+    margin-top: 6px;
+    margin-bottom: 3px;
+  }
+  .card button{
+    background-color: #85929E ;
+    color: #f2f2f2;
+    padding: 10px;
+    margin-top: 5px;
+    border-color: #f2f2f2;
+    font-size: 15px;
+    border-radius: 8px;
+  }
+  /* footer */
+  .footer{
+    margin-bottom: 20px;
+    background-color: #717171;
+    color: #000;
+    width: 100%;
+    height: 50px;
+    border-top: 5px solid #000;
+  }
+  .footer p{
+   margin-left: 70%;
+   padding: 10px;
+   color: #f2f2f2;
+  }
