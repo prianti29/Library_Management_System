@@ -1,41 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/_admin/adding.css">
-    <title>Create Categories</title>
+    <link rel="stylesheet" href="/adding.css">
+    <title>Document</title>
 </head>
-
 <body>
-    <!-- LOGO -->
-    <div class="top-nav">
+     <!-- LOGO -->
+     <div class="top-nav">
         <div class="logo">
             <img src="/images/logo (1).png" alt="" />
         </div>
-        <form action="{{ url('/logout') }}" method="POST">
-            @csrf
-            <div class="btn">
-                <button>Log Out</button>
-            </div>
-        </form>
+        <div class="btn">
+            <button>Log Out</button>
+        </div>
     </div>
 
     <!-- NAVBAR -->
     <div class="nav">
         <div class="navLinks">
             <ul>
-                <li> <a href="{{ url('admin/dashboard') }}" Dashboard</a> </li> <li><a href="">Reg Students</a></li>
+                <li><a href="">Dashboard</a></li>
+                <li><a href="">Reg Students</a></li>
                 <li><a href="">Change Password</a></li>
                 <li>
                     <div class="dropdown">
                         <button class="dropbtn">Categories</button>
                         <div class="dropdown-content">
-                            <a href="{{ url('admin/categories/create') }}">Add Categories </a>
-                            <a href="{{ url('admin/categories') }}"> Manage Categories</a>
-
+                            <a href="#">Add Categories </a>
+                            <a href="#">Manage Categories</a>
+                           
                         </div>
                     </div>
                 </li>
@@ -44,7 +40,7 @@
                         <button class="dropbtn">Author</button>
                         <div class="dropdown-content">
                             <a href="#">Add Author</a>
-                            <a href="#">Manage Author</a>
+                            <a href="#">Manage Author</a>   
                         </div>
                     </div>
                 </li>
@@ -72,28 +68,28 @@
 
     <!-- header -->
     <div class="header">
-        <p>Add Category</p>
+        <p>Issued new book</p>
     </div>
 
 
-    <!-- Adding Photo -->
-    <!-- USER LOGIN FORM -->
-    <div class="title">
-        <p>Category Info</p>
-    </div>
+<!-- Adding Photo -->
+  <!-- USER LOGIN FORM -->
+  <div class="title">
+  <p>Issue new book</p>
+  </div>
     <div class="card">
-        <form method="POST" action="{{ route('categories.store') }}">
-            @csrf
-            <label for="fname">Category Name</label> <br>
-            <input type="text" name="name" value="{{old('name')}}"><br>
-            <label for="fname">Status</label><br>
+        <form action="">
+            <label for="fname">Student ID</label> <br>
+            <input type="text" id="fname" name="fname"> <br>
+            <label for="fname">ISBN Number or Book Title</label><br>
             <input type="text" id="fname" name="fname">
+            <!-- <a href="">Forgot Password</a> <br> -->
             <button>Submit</button>
+            <!-- <a href="">| Not Register Yet</a> -->
         </form>
     </div>
     <div class="footer">
-        <p> © 2022 Online Library Management System</p>
+        <p>  © 2022 Online Library Management System</p>
     </div>
 </body>
-
 </html>

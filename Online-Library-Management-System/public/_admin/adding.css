@@ -95,6 +95,7 @@
     color:#f1f1f1;
     font-family: 'Lato', sans-serif;
 }
+
 /* HEADER */
 .header{
     margin: 4% 20% 3% 20%;
@@ -108,44 +109,64 @@
     font-weight: 400;
 }
 
-/* CARD-BODY */
-.row{
-    display: flex;
-    justify-content: space-between;
-    margin: 0% 15% 2% 15%;
-}
- .row .column{
-    border: 2px solid #808B96;
+/* ADDING FORM */
+
+.card{
+    border: 2px solid #717171;
     width: 30%;
-    height: 90%;
-    margin-right: 3%;
-    text-align: center;
-    padding: 3% 0 3% 0;
+    margin-left: 35%;
+    margin-bottom: 20px;
+    padding: 10px;
 }
-.row1{
-    display: flex;
-    justify-content: space-between;
-    margin: 0% 55% 2% 0%;
+.title{
+    height: 40px;
+    background-color: #c6c6c6;
+    margin-bottom: 10px;
+    margin-top: 2%;
+    width: 31.6%;
+    margin-left: 35%;
+    
 }
-.row1 .column{
-    border: 2px solid #808B96;
-    width: 29%;
-    padding: 3% 2% 3% 3%;
-    text-align: center;
+.title p{
+   padding: 5px;
+   margin-left: 10px;
+   font-size: 20px;
+   font-weight: 700;
+   font-family: 'Lato', sans-serif;
+   text-transform: uppercase;
 }
-.column i{
-    color: #808B96;
-}
-.column i, h3, p{
-    margin-bottom: 5px;
-    margin-top: 3px;
-}
-.column h3, p{
-    font-size: 20px;
+.card input {
+    width: 100%;
+    padding: 10px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1.5px solid #000000;
+  }
+.card label{
+    font-size: 17px;
+    font-weight: 700;
     font-family: 'Lato', sans-serif;
+  }
+  .card a{
+    color: #717171;
+    text-decoration: none;
+    font-size: larger;
     font-weight: 400;
-}
-/* footer */
+    font-family: 'Lato', sans-serif;
+    margin-top: 6px;
+    margin-bottom: 3px;
+  }
+  .card button{
+    background-color: #85929E ;
+    color: #f2f2f2;
+    padding: 10px;
+    margin-top: 5px;
+    border-color: #f2f2f2;
+    font-size: 15px;
+    border-radius: 8px;
+  }
+
+  /* footer */
 .footer{
     margin-bottom: 20px;
     background-color: #717171;

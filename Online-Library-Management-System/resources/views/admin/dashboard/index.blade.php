@@ -2,48 +2,31 @@
 @section('contents')
 <div class="row">
     <div class="column">
-        <div class="card">
-          <h3><i class="fa-solid fa-book icon fa-2x"></i></h3>
-          <p style="padding-top:10px">Some text</p> 
-          <a href="{{ url('admin/books') }}">
-            <p style="padding-bottom:10px; padding-top:10px">Book Listed</p>
-        </a>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card">
-          <h3><i class="fa-solid fa-recycle icon fa-2x"></i></h3>
-          <p style="padding-top:10px" >Some text</p>
-          <p style="padding-bottom:10px; padding-top:10px" >Book Not Returned Yet</p>
-        </div>
-      </div>
+        <i class="fa fa-book fa-5x"></i>
+        <h3>3</h3>
+        <p>Books Listed</p>
+    </div>
     <div class="column">
-        <div class="card">
-            <h3><i class="fa-solid fa-user icon fa-2x"></i></h3>
-            <p style="padding-top:10px">Some text</p>
-            <p style="padding-bottom:10px; padding-top:10px">Registerd User</p>
-     
-        </div>
+        <i class="fa fa-recycle fa-5x"></i>
+        <h3>3</h3>
+        <p>Book Not Return Yet</p>
+    </div>
+    <div class="column">
+        <i class="fa fa-users fa-5x"></i>
+        <h3>3</h3>
+        <p>Registerd Users</p>
+    </div>
+    <div class="column">
+        <i class="fa fa-user fa-5x"></i>
+        <h3>3</h3>
+        <p>Author Listed</p>
     </div>
 </div>
-<div class="row" style="margin-bottom: 50px;">
+<div class="row1">
     <div class="column">
-        <div class="card">
-            <h3><i class="fa-solid fa-user icon fa-2x"></i></h3>
-            <p style="padding-top:10px">Some text</p>
-            <a href="{{ url('admin/author') }}">
-            <p style="padding-bottom:10px; padding-top:10px">Author User</p>
-        </a>
-        </div>
-    </div>
-    <div class="column">
-        <div class="card">
-            <h3><i class="fa-solid fa-file-zipper fa-2x"></i></h3>
-            <p style="padding-top:10px">Some text</p>
-            <a href="{{ url('admin/categories') }}">
-                <p style="padding-bottom:10px; padding-top:10px">Listed Categories</p>
-            </a>
-        </div>
+        <i class="fa fa-file-archive fa-5x"></i>
+        <h3>3</h3>
+       <p> Listed Categories</p>
     </div>
 </div>
 @endsection

@@ -8,6 +8,10 @@
     justify-content: space-between;
     margin-top: 15px;
 }
+.logo img{
+    height: 100%;
+    width: 100%;
+}
 
 .top-nav .btn button {
     background-color: #C0392B;
@@ -95,6 +99,7 @@
     color:#f1f1f1;
     font-family: 'Lato', sans-serif;
 }
+
 /* HEADER */
 .header{
     margin: 4% 20% 3% 20%;
@@ -108,44 +113,57 @@
     font-weight: 400;
 }
 
-/* CARD-BODY */
+/* ADDING FORM */
+
+.card{
+    border: 2px solid #717171;
+    width: 70%;
+    /* margin-left: 35%; */
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.title{
+    height: 40px;
+    background-color: #c6c6c6;
+    margin-bottom: 10px;
+    margin-top: 2%;
+    width: 71.5%;
+    text-align: center;
+    
+}
+.title p{
+   /* padding: 5px; */
+   margin-left: 10px;
+   font-size: 15px;
+   font-weight: 700;
+   font-family: 'Lato', sans-serif;
+   text-transform: uppercase;
+   text-align: left;
+   padding-top: 10px;
+}
 .row{
     display: flex;
     justify-content: space-between;
-    margin: 0% 15% 2% 15%;
 }
- .row .column{
-    border: 2px solid #808B96;
-    width: 30%;
-    height: 90%;
-    margin-right: 3%;
-    text-align: center;
-    padding: 3% 0 3% 0;
+ img{
+   height: 32%;
+   width: 32%;
 }
-.row1{
-    display: flex;
-    justify-content: space-between;
-    margin: 0% 55% 2% 0%;
-}
-.row1 .column{
-    border: 2px solid #808B96;
-    width: 29%;
-    padding: 3% 2% 3% 3%;
-    text-align: center;
-}
-.column i{
-    color: #808B96;
-}
-.column i, h3, p{
-    margin-bottom: 5px;
-    margin-top: 3px;
-}
-.column h3, p{
-    font-size: 20px;
+.img-bottom{
     font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
     font-weight: 400;
 }
-/* footer */
+.book-title{
+    font-weight: 600;
+}
+.issued-status{
+    color: #e91207;
+    font-weight: 600;
+}
+  /* footer */
 .footer{
     margin-bottom: 20px;
     background-color: #717171;

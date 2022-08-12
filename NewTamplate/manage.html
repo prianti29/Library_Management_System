@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/_admin/manage.css" />
+        <link rel="stylesheet" href="manage.css" />
         <title>Manage</title>
     </head>
     <body>
@@ -21,15 +21,15 @@
         <div class="nav">
             <div class="navLinks">
                 <ul>
-                    <li> <a href="{{ url('admin/dashboard') }}">Dashboard</a></li>
+                    <li><a href="">Dashboard</a></li>
                     <li><a href="">Reg Students</a></li>
                     <li><a href="">Change Password</a></li>
                     <li>
                         <div class="dropdown">
                             <button class="dropbtn">Categories</button>
                             <div class="dropdown-content">
-                                <a href="{{ url('admin/categories/create') }}">Add Categories </a>
-                                <a href="{{ url('admin/categories') }}">Manage Categories</a>
+                                <a href="#">Add Categories </a>
+                                <a href="#">Manage Categories</a>
                             </div>
                         </div>
                     </li>
@@ -37,8 +37,8 @@
                         <div class="dropdown">
                             <button class="dropbtn">Author</button>
                             <div class="dropdown-content">
-                                <a href="{{ url('admin/author/create') }}">Add Author</a>
-                                <a href="{{ url('admin/author') }}">Manage Author</a>
+                                <a href="#">Add Author</a>
+                                <a href="#">Manage Author</a>
                             </div>
                         </div>
                     </li>
@@ -46,8 +46,8 @@
                         <div class="dropdown">
                             <button class="dropbtn">Books</button>
                             <div class="dropdown-content">
-                                <a href="{{ url('admi/books/create') }}">Add Books</a>
-                                <a href="{{ url('admin/books') }}">Manage Books</a>
+                                <a href="#">Add Books</a>
+                                <a href="#">Manage Books</a>
                             </div>
                         </div>
                     </li>
@@ -82,7 +82,7 @@
                 </div>
                 <div class="p1" style="float: right">
                     <form action="">
-                        <label for="fname">Submit:</label>
+                        <label for="fname">First name:</label>
                         <input
                             type="text"
                             id="fname"
@@ -100,23 +100,16 @@
                     <th>Updation Date</th>
                     <th>Action</th>
                 </tr>
-                @foreach ($category_list as $item)
                 <tr>
-                    <td>{{ $item->id }}</td>
-                    <td>{{ $item->CategoryName }}</td>
-                    <td><button class="button button1">{{ $item->Status }}</button></td>
-                    <td>{{ $item->created_at }}</td>
-                    <td>{{ $item->updated_at }}</td>
-                    <td> <a href="{{ url("/admin/categories/$item->id/edit") }}"class="edit">Edit</a>
-                        {{-- <a href="" class="delete">Delete</a> --}}
-                        <form action="{{ url("/admin/categories/$item->id") }}" method="POST">
-                            @csrf
-                            @method("delete")
-                            <input type="submit" name="" id="" value="Delete" class="delete">
-                        </form>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="" class="edit">Edit</a>
+                        <a href="" class="delete">Delete</a>
                     </td>
                 </tr>
-                @endforeach
             </table>
         </div>
         <div class="footer">

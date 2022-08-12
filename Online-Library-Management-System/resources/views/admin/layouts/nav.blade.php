@@ -1,70 +1,63 @@
- <!-- header -->
- <div class="header" id="home">
-     <div class="container">
-         <ul class="logo">
-             <div>
-                 <i class="fa-solid fa-book-open-reader fa-3x"></i>
-             </div>
-             <div>
-                 <h3>
-                     online Library <br />
-                     Management System
-                 </h3>
-             </div>
-         </ul>
-         <form action="{{ url('/logout') }}" method="POST">
-             @csrf
-             <div class="log-btn">
-                 <p><button class="btn" type="submit">LOG me Out</button></p>
-             </div>
-         </form>
-     </div>
- </div>
- <!-- //header -->
-
- <!-- Navbar -->`
- <div class="navbar">
-     <a href="{{ url('admin/dashboard') }}">Dashboard</a>
-     <a href="#">REG STUDENTS</a>
-     <a href="#">CHANGE PASSWORD</a>
-     <div class="dropdown">
-         <button class="dropbtn">CATEGORIES
-             <i class="fa fa-caret-down"></i>
-         </button>
-         <div class="dropdown-content">
-          <a href="{{ url('admin/categories/create') }}">Add Categories</a>
-          <a href="{{ url('admin/categories') }}">Manage Categories</a>
-          
-         </div> 
-     </div>
-     <div class="dropdown"> 
-         <button class="dropbtn">AUTHORS
-             <i class="fa fa-caret-down"></i>
-         </button>
-         <div class="dropdown-content">
-            <a href="{{ url('admin/author/create') }}">Add Authors</a>
-            <a href="{{ url('admin/author') }}">Manage Author</a>
+<!-- LOGO -->
+<div class="top-nav">
+    <div class="logo">
+        <img src="/images/logo (1).png" alt="" />
+    </div>
+    <form action="{{ url('/logout') }}" method="POST">
+        @csrf
+        <div class="btn">
+            <button>Log Out</button>
         </div>
-     </div>
-     <div class="dropdown">
-         <button class="dropbtn">BOOKS
-             <i class="fa fa-caret-down"></i>
-         </button>
-         <div class="dropdown-content">
-            <a href="{{ url('admin/books/create') }}">Add books</a>
-            <a href="{{ url('admin/books') }}">Manage Book</a>
-         </div>
-     </div>
-     <div class="dropdown">
-         <button class="dropbtn">ISSUED BOOKS
-             <i class="fa fa-caret-down"></i>
-         </button>
-         <div class="dropdown-content">
-             <a href="#">Issued New Book</a>
-             <a href="#">Manage Issued New Book</a>
-         </div>
-     </div>
- </div>
+    </form>
+</div>
+<!-- NAVBAR -->
+<div class="nav">
+    <div class="navLinks">
+        <ul>
+            <li><a href="{{ url('admin/dashboard') }}">Dashboard</a></li>
+            <li><a href="">Reg Students</a></li>
+            <li><a href="">Change Password</a></li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">Categories</button>
+                    <div class="dropdown-content">
+                        <a href="{{ url('admin/categories/create') }}">Add Categories</a>
+                        <a href="{{ url('admin/categories') }}">Manage Categories</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">Author</button>
+                    <div class="dropdown-content">
+                        <a href="{{ url('admin/author/create') }}">Add Author</a>
+                        <a href="{{ url('admin/author') }}">Manage Author</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">Books</button>
+                    <div class="dropdown-content">
+                        <a href="{{ url('admin/books/create') }}">Add Books</a>
+                        <a href="{{ url('admin/books') }}">Manage Books</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">Issued Books</button>
+                    <div class="dropdown-content">
+                        <a href="#">Issued New Book</a>
+                        <a href="#">Manage Issued Book</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
 
- <h4>Admin Dashboard</h4>
- <!-- //navbar -->
+<!-- header -->
+<div class="header">
+    <p>Admin Dashboard</p>
+</div>
