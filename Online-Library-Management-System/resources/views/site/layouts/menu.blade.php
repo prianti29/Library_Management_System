@@ -1,49 +1,57 @@
- <!-- header -->
- <div class="header" id="home">
-     <div class="container">
-         <ul class="logo">
-             <div>
-                 <i class="fa-solid fa-book-open-reader fa-3x"></i>
-             </div>
-             <div>
-                 <h3>
-                     online Library <br />
-                     Management System
-                 </h3>
-             </div>
-         </ul>
-         
-         @auth
+<!-- LOGO -->
+<div class="top-nav">
+    <div class="logo">
+        <img src="/images/logo (1).png" alt="" />
+    </div>
+    @auth
+
+    <form action="{{ url('/logout') }}" method="POST">
+        @csrf
+        <div class="btn">
+            <div style="font-size: 20px; text-align:center; font-weight:500; font-family:cursive" >
+                {{Auth::user()->name}}
+            </div>
+            
+            <button>Log Out</button>
+        </div>
+    </form>
+    @endauth
+</div>
+
+{{-- @auth
          {{Auth::user()->name}}
-         <form action="{{ url('/logout') }}" method="POST">
-             @csrf
-             <div class="log-btn">
-                 <p><button class="btn" type="submit">LOG me Out</button></p>
-             </div>
-         </form>
-         @endauth
+<form action="{{ url('/logout') }}" method="POST">
+    @csrf
+    <div class="log-btn">
+        <p><button class="btn" type="submit">LOG me Out</button></p>
+    </div>
+</form>
+@endauth --}}
 
-     </div>
- </div>
- <!-- //header -->
+{{-- </div>
+ </div> --}}
+<!-- //header -->
+<!-- NAVBAR -->
+<div class="nav">
+    <div class="navLinks">
+        <ul>
+            <li><a href="">Dashboard</a></li>
+            <li><a href="">Issued Book</a></li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">Categories</button>
+                    <div class="dropdown-content">
+                        <a href="#">Add Categories </a>
+                        <a href="#">Manage Categories</a>
+                    </div>
+                </div>
+            </li>
 
- <!-- Navbar -->`
- <div class="navbar">
-     <a href="#">Dashboard</a>
-     {{-- <a href="#">REG STUDENTS</a> --}}
-     <a href="#">Issued Book</a>
-     <a href="{{ url('/login') }}">login</a>
-     <div class="dropdown">
-         <button class="dropbtn">Account
-             <i class="fa fa-caret-down"></i>
-         </button>
-         <div class="dropdown-content">
-             <a href="#">My Profile</a>
-             <a href="#">Change Password</a>
-         </div>
-     </div>
-
- </div>
-
- <h4>User Dashboard</h4>
- <!-- //navbar -->
+            <li> <a href="{{ url('/login') }}">login</a></li>
+        </ul>
+    </div>
+</div>
+<!-- header -->
+<div class="header">
+    <p>Admin Dashboard</p>
+</div>

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/admin/manageAuthor.css" />
     <link rel="stylesheet" href="/admin/manageCategories.css">
 
-    <title>Manage Categories</title>
+    <title>Manage Author</title>
 </head>
 
 <body>
@@ -42,7 +42,7 @@
         <a href="#">CHANGE PASSWORD</a>
         <div class="dropdown">
             <button class="dropbtn">
-                CATEGORIES
+                Categories
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
@@ -57,7 +57,7 @@
             </button>
             <div class="dropdown-content">
                 <a href="{{ url('admin/author/create') }}">Add Authors</a>
-                <a href="{{ url('admin/author') }}">Manage Category</a>
+                <a href="{{ url('admin/author') }}">Manage Author</a>
             </div>
         </div>
         <div class="dropdown">
@@ -66,7 +66,7 @@
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="{{ url('admi/books/create') }}">Add books</a>
+                <a href="{{ url('admin/books/create') }}">Add books</a>
                 <a href="{{ url('admin/books') }}">Manage Book</a>
             </div>
         </div>
@@ -84,7 +84,7 @@
     <h4>Manage Author</h4>
 
     <!-- Table -->
-    <h1>Categories</h1>
+    <h1>Authors</h1>
 
     <!-- Pagination -->
     <form action="" class="select_box">
@@ -107,34 +107,29 @@
     <table id="customers">
         <tr>
             <th>#</th>
-            <th>Categories</th>
-            <th>Status</th>
+            <th>Authors</th>
             <th>Creation Date</th>
             <th>Updation Date</th>
             <th>Action</th>
         </tr>
 
-        @foreach ($category_list as $item)
+        @foreach ($author_list as $item)
         <tr>
             <td>{{ $item->id }}</td>
-            <td>{{ $item->CategoryName }}</td>
-            <td><button class="button button1">{{ $item->Status }}</button></td>
+            <td>{{ $item->AuthorName }}</td>
             <td>{{ $item->created_at }}</td>
             <td>{{ $item->updated_at }}</td>
             <td>
-                {{-- <button class="button button2">Edit</button> --}}
-                <a href="{{ url("/admin/categories/$item->id/edit") }}" class="button button2">Edit</a>
-                <form action="{{ url("/admin/categories/$item->id") }}" method="POST">
+                <a href="{{ url("/admin/author/$item->id/edit") }}" class="button button2">Edit</a>
+                <form action="{{ url("/admin/author/$item->id") }}" method="POST">
                     @csrf
                     @method("delete")
                     <input type="submit" name="" id="" value="Delete" class="button button3">
-
                 </form>
-                {{-- <a href="" class="button button3">Delete</a> --}}
-                {{-- <button class="button button3">Detete</button> --}}
             </td>
         </tr>
         @endforeach
+
     </table>
 
     <!-- Pagination -->
